@@ -1,0 +1,77 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+
+    <sys:String x:Key="MainWindow.Title">AddressPrinter</sys:String>
+    <sys:String x:Key="MainWindow.PrinterLabel">Impresora:</sys:String>
+    <sys:String x:Key="MainWindow.PrinterComboName">Seleccionar impresora</sys:String>
+    <sys:String x:Key="MainWindow.PrintPorto">Imprimir #PORTO</sys:String>
+    <sys:String x:Key="MainWindow.PrintPortoName">Imprimir etiqueta de franqueo</sys:String>
+    <sys:String x:Key="MainWindow.PrintSender">Imprimir remitente (desde ajustes)</sys:String>
+    <sys:String x:Key="MainWindow.PrintAddress">Imprimir dirección</sys:String>
+    <sys:String x:Key="MainWindow.PrintFromBook">Imprimir desde la agenda</sys:String>
+    <sys:String x:Key="MainWindow.PrintFromBookName">Imprimir desde la agenda</sys:String>
+    <sys:String x:Key="MainWindow.Settings">Ajustes…</sys:String>
+    <sys:String x:Key="MainWindow.SettingsName">Abrir ajustes</sys:String>
+    <sys:String x:Key="MainWindow.SenderMissingMsg">Aún no hay remitente configurado. Añádelo en los ajustes.</sys:String>
+    <sys:String x:Key="MainWindow.SenderMissingTitle">Falta el remitente</sys:String>
+
+    <sys:String x:Key="Settings.Title">Ajustes</sys:String>
+    <sys:String x:Key="Settings.GroupPrinter">Impresora</sys:String>
+    <sys:String x:Key="Settings.PrinterComboName">Seleccionar impresora</sys:String>
+    <sys:String x:Key="Settings.GroupAppearance">Apariencia</sys:String>
+    <sys:String x:Key="Settings.ThemeLabel">Tema</sys:String>
+    <sys:String x:Key="Settings.ThemeComboName">Seleccionar tema</sys:String>
+    <sys:String x:Key="Settings.ThemeSystem">Seguir sistema</sys:String>
+    <sys:String x:Key="Settings.ThemeLight">Claro</sys:String>
+    <sys:String x:Key="Settings.LanguageLabel">Idioma</sys:String>
+    <sys:String x:Key="Settings.LanguageComboName">Idioma</sys:String>
+    <sys:String x:Key="Settings.ThemeDark">Oscuro</sys:String>
+    <sys:String x:Key="Settings.GroupSender">Remitente</sys:String>
+    <sys:String x:Key="Settings.SenderName">Nombre</sys:String>
+    <sys:String x:Key="Settings.SenderNameBoxName">Nombre del remitente</sys:String>
+    <sys:String x:Key="Settings.SenderStreet">Calle y número</sys:String>
+    <sys:String x:Key="Settings.SenderStreetBoxName">Calle y número del remitente</sys:String>
+    <sys:String x:Key="Settings.SenderZipCity">Código postal y ciudad</sys:String>
+    <sys:String x:Key="Settings.SenderZipCityBoxName">Código postal y ciudad del remitente</sys:String>
+    <sys:String x:Key="Settings.GroupLabelSize">Tamaño de etiqueta</sys:String>
+    <sys:String x:Key="Settings.LabelWidth">Ancho (mm)</sys:String>
+    <sys:String x:Key="Settings.WidthBoxName">Ancho de etiqueta en milímetros</sys:String>
+    <sys:String x:Key="Settings.LabelHeight">Alto (mm)</sys:String>
+    <sys:String x:Key="Settings.HeightBoxName">Alto de etiqueta en milímetros</sys:String>
+    <sys:String x:Key="Settings.Save">Guardar</sys:String>
+    <sys:String x:Key="Settings.Cancel">Cancelar</sys:String>
+
+    <sys:String x:Key="Address.Title">Introducir dirección</sys:String>
+    <sys:String x:Key="Address.Name">Nombre</sys:String>
+    <sys:String x:Key="Address.NameBoxName">Nombre del destinatario</sys:String>
+    <sys:String x:Key="Address.Street">Calle y número</sys:String>
+    <sys:String x:Key="Address.StreetBoxName">Calle y número del destinatario</sys:String>
+    <sys:String x:Key="Address.ZipCity">Código postal y ciudad</sys:String>
+    <sys:String x:Key="Address.ZipCityBoxName">Código postal y ciudad del destinatario</sys:String>
+    <sys:String x:Key="Address.Country">País (opcional)</sys:String>
+    <sys:String x:Key="Address.CountryBoxName">País del destinatario, opcional</sys:String>
+    <sys:String x:Key="Address.SaveAndPrint">Imprimir y guardar</sys:String>
+    <sys:String x:Key="Address.Print">Imprimir</sys:String>
+    <sys:String x:Key="Address.Cancel">Cancelar</sys:String>
+    <sys:String x:Key="Address.ValidationMsg">Rellena al menos nombre, calle y código postal/ciudad.</sys:String>
+    <sys:String x:Key="Address.ValidationTitle">Entrada incompleta</sys:String>
+
+    <sys:String x:Key="Porto.Title">Imprimir #PORTO</sys:String>
+    <sys:String x:Key="Porto.CodeLabel">Código DHL (el que recibes de DHL)</sys:String>
+    <sys:String x:Key="Porto.CodeLabelName">Introducir código DHL</sys:String>
+    <sys:String x:Key="Porto.CodeBoxName">Código DHL para la etiqueta de franqueo</sys:String>
+    <sys:String x:Key="Porto.Print">Imprimir</sys:String>
+    <sys:String x:Key="Porto.Cancel">Cancelar</sys:String>
+
+    <sys:String x:Key="AddressBook.Title">Agenda</sys:String>
+    <sys:String x:Key="AddressBook.ListName">Destinatarios guardados</sys:String>
+    <sys:String x:Key="AddressBook.Print">Imprimir</sys:String>
+    <sys:String x:Key="AddressBook.Delete">Eliminar</sys:String>
+    <sys:String x:Key="AddressBook.Close">Cerrar</sys:String>
+    <sys:String x:Key="AddressBook.NoSelectionMsg">Selecciona primero una dirección de la lista.</sys:String>
+    <sys:String x:Key="AddressBook.NoSelectionTitle">Sin selección</sys:String>
+    <sys:String x:Key="AddressBook.DeleteConfirm">¿Eliminar realmente “{0}” de la agenda?</sys:String>
+    <sys:String x:Key="AddressBook.DeleteTitle">Eliminar dirección</sys:String>
+
+</ResourceDictionary>

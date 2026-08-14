@@ -1,0 +1,77 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+
+    <sys:String x:Key="MainWindow.Title">AddressPrinter</sys:String>
+    <sys:String x:Key="MainWindow.PrinterLabel">Printer:</sys:String>
+    <sys:String x:Key="MainWindow.PrinterComboName">Printer selecteren</sys:String>
+    <sys:String x:Key="MainWindow.PrintPorto">#PORTO afdrukken</sys:String>
+    <sys:String x:Key="MainWindow.PrintPortoName">Porto-etiket afdrukken</sys:String>
+    <sys:String x:Key="MainWindow.PrintSender">Afzender afdrukken (uit instellingen)</sys:String>
+    <sys:String x:Key="MainWindow.PrintAddress">Adres afdrukken</sys:String>
+    <sys:String x:Key="MainWindow.PrintFromBook">Afdrukken uit adresboek</sys:String>
+    <sys:String x:Key="MainWindow.PrintFromBookName">Afdrukken uit adresboek</sys:String>
+    <sys:String x:Key="MainWindow.Settings">Instellingen…</sys:String>
+    <sys:String x:Key="MainWindow.SettingsName">Instellingen openen</sys:String>
+    <sys:String x:Key="MainWindow.SenderMissingMsg">Er is nog geen afzender ingesteld. Voeg er een toe in de instellingen.</sys:String>
+    <sys:String x:Key="MainWindow.SenderMissingTitle">Afzender ontbreekt</sys:String>
+
+    <sys:String x:Key="Settings.Title">Instellingen</sys:String>
+    <sys:String x:Key="Settings.GroupPrinter">Printer</sys:String>
+    <sys:String x:Key="Settings.PrinterComboName">Printer selecteren</sys:String>
+    <sys:String x:Key="Settings.GroupAppearance">Weergave</sys:String>
+    <sys:String x:Key="Settings.ThemeLabel">Thema</sys:String>
+    <sys:String x:Key="Settings.ThemeComboName">Thema selecteren</sys:String>
+    <sys:String x:Key="Settings.ThemeSystem">Systeem volgen</sys:String>
+    <sys:String x:Key="Settings.ThemeLight">Licht</sys:String>
+    <sys:String x:Key="Settings.LanguageLabel">Taal</sys:String>
+    <sys:String x:Key="Settings.LanguageComboName">Taal</sys:String>
+    <sys:String x:Key="Settings.ThemeDark">Donker</sys:String>
+    <sys:String x:Key="Settings.GroupSender">Afzender</sys:String>
+    <sys:String x:Key="Settings.SenderName">Naam</sys:String>
+    <sys:String x:Key="Settings.SenderNameBoxName">Naam van de afzender</sys:String>
+    <sys:String x:Key="Settings.SenderStreet">Straat en huisnummer</sys:String>
+    <sys:String x:Key="Settings.SenderStreetBoxName">Straat en huisnummer van de afzender</sys:String>
+    <sys:String x:Key="Settings.SenderZipCity">Postcode en plaats</sys:String>
+    <sys:String x:Key="Settings.SenderZipCityBoxName">Postcode en plaats van de afzender</sys:String>
+    <sys:String x:Key="Settings.GroupLabelSize">Etiketgrootte</sys:String>
+    <sys:String x:Key="Settings.LabelWidth">Breedte (mm)</sys:String>
+    <sys:String x:Key="Settings.WidthBoxName">Etiketbreedte in millimeters</sys:String>
+    <sys:String x:Key="Settings.LabelHeight">Hoogte (mm)</sys:String>
+    <sys:String x:Key="Settings.HeightBoxName">Etikethoogte in millimeters</sys:String>
+    <sys:String x:Key="Settings.Save">Opslaan</sys:String>
+    <sys:String x:Key="Settings.Cancel">Annuleren</sys:String>
+
+    <sys:String x:Key="Address.Title">Adres invoeren</sys:String>
+    <sys:String x:Key="Address.Name">Naam</sys:String>
+    <sys:String x:Key="Address.NameBoxName">Naam van de ontvanger</sys:String>
+    <sys:String x:Key="Address.Street">Straat en huisnummer</sys:String>
+    <sys:String x:Key="Address.StreetBoxName">Straat en huisnummer van de ontvanger</sys:String>
+    <sys:String x:Key="Address.ZipCity">Postcode en plaats</sys:String>
+    <sys:String x:Key="Address.ZipCityBoxName">Postcode en plaats van de ontvanger</sys:String>
+    <sys:String x:Key="Address.Country">Land (optioneel)</sys:String>
+    <sys:String x:Key="Address.CountryBoxName">Land van de ontvanger, optioneel</sys:String>
+    <sys:String x:Key="Address.SaveAndPrint">Afdrukken en opslaan</sys:String>
+    <sys:String x:Key="Address.Print">Afdrukken</sys:String>
+    <sys:String x:Key="Address.Cancel">Annuleren</sys:String>
+    <sys:String x:Key="Address.ValidationMsg">Vul ten minste naam, straat en postcode/plaats in.</sys:String>
+    <sys:String x:Key="Address.ValidationTitle">Onvolledige invoer</sys:String>
+
+    <sys:String x:Key="Porto.Title">#PORTO afdrukken</sys:String>
+    <sys:String x:Key="Porto.CodeLabel">DHL-code (die je van DHL krijgt)</sys:String>
+    <sys:String x:Key="Porto.CodeLabelName">DHL-code invoeren</sys:String>
+    <sys:String x:Key="Porto.CodeBoxName">DHL-code voor het porto-etiket</sys:String>
+    <sys:String x:Key="Porto.Print">Afdrukken</sys:String>
+    <sys:String x:Key="Porto.Cancel">Annuleren</sys:String>
+
+    <sys:String x:Key="AddressBook.Title">Adresboek</sys:String>
+    <sys:String x:Key="AddressBook.ListName">Opgeslagen ontvangers</sys:String>
+    <sys:String x:Key="AddressBook.Print">Afdrukken</sys:String>
+    <sys:String x:Key="AddressBook.Delete">Verwijderen</sys:String>
+    <sys:String x:Key="AddressBook.Close">Sluiten</sys:String>
+    <sys:String x:Key="AddressBook.NoSelectionMsg">Selecteer eerst een adres uit de lijst.</sys:String>
+    <sys:String x:Key="AddressBook.NoSelectionTitle">Geen selectie</sys:String>
+    <sys:String x:Key="AddressBook.DeleteConfirm">“{0}” echt uit het adresboek verwijderen?</sys:String>
+    <sys:String x:Key="AddressBook.DeleteTitle">Adres verwijderen</sys:String>
+
+</ResourceDictionary>

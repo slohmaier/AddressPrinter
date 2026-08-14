@@ -1,0 +1,77 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+
+    <sys:String x:Key="MainWindow.Title">AddressPrinter</sys:String>
+    <sys:String x:Key="MainWindow.PrinterLabel">プリンター:</sys:String>
+    <sys:String x:Key="MainWindow.PrinterComboName">プリンターを選択</sys:String>
+    <sys:String x:Key="MainWindow.PrintPorto">#PORTO を印刷</sys:String>
+    <sys:String x:Key="MainWindow.PrintPortoName">料金ラベルを印刷</sys:String>
+    <sys:String x:Key="MainWindow.PrintSender">差出人を印刷（設定から）</sys:String>
+    <sys:String x:Key="MainWindow.PrintAddress">宛先を印刷</sys:String>
+    <sys:String x:Key="MainWindow.PrintFromBook">アドレス帳から印刷</sys:String>
+    <sys:String x:Key="MainWindow.PrintFromBookName">アドレス帳から印刷</sys:String>
+    <sys:String x:Key="MainWindow.Settings">設定…</sys:String>
+    <sys:String x:Key="MainWindow.SettingsName">設定を開く</sys:String>
+    <sys:String x:Key="MainWindow.SenderMissingMsg">差出人が設定されていません。設定で追加してください。</sys:String>
+    <sys:String x:Key="MainWindow.SenderMissingTitle">差出人がありません</sys:String>
+
+    <sys:String x:Key="Settings.Title">設定</sys:String>
+    <sys:String x:Key="Settings.GroupPrinter">プリンター</sys:String>
+    <sys:String x:Key="Settings.PrinterComboName">プリンターを選択</sys:String>
+    <sys:String x:Key="Settings.GroupAppearance">外観</sys:String>
+    <sys:String x:Key="Settings.ThemeLabel">テーマ</sys:String>
+    <sys:String x:Key="Settings.ThemeComboName">テーマを選択</sys:String>
+    <sys:String x:Key="Settings.ThemeSystem">システムに従う</sys:String>
+    <sys:String x:Key="Settings.ThemeLight">ライト</sys:String>
+    <sys:String x:Key="Settings.LanguageLabel">言語</sys:String>
+    <sys:String x:Key="Settings.LanguageComboName">言語</sys:String>
+    <sys:String x:Key="Settings.ThemeDark">ダーク</sys:String>
+    <sys:String x:Key="Settings.GroupSender">差出人</sys:String>
+    <sys:String x:Key="Settings.SenderName">名前</sys:String>
+    <sys:String x:Key="Settings.SenderNameBoxName">差出人の名前</sys:String>
+    <sys:String x:Key="Settings.SenderStreet">番地と番号</sys:String>
+    <sys:String x:Key="Settings.SenderStreetBoxName">差出人の番地と番号</sys:String>
+    <sys:String x:Key="Settings.SenderZipCity">郵便番号と市区町村</sys:String>
+    <sys:String x:Key="Settings.SenderZipCityBoxName">差出人の郵便番号と市区町村</sys:String>
+    <sys:String x:Key="Settings.GroupLabelSize">ラベルサイズ</sys:String>
+    <sys:String x:Key="Settings.LabelWidth">幅 (mm)</sys:String>
+    <sys:String x:Key="Settings.WidthBoxName">ラベルの幅（ミリメートル）</sys:String>
+    <sys:String x:Key="Settings.LabelHeight">高さ (mm)</sys:String>
+    <sys:String x:Key="Settings.HeightBoxName">ラベルの高さ（ミリメートル）</sys:String>
+    <sys:String x:Key="Settings.Save">保存</sys:String>
+    <sys:String x:Key="Settings.Cancel">キャンセル</sys:String>
+
+    <sys:String x:Key="Address.Title">宛先を入力</sys:String>
+    <sys:String x:Key="Address.Name">名前</sys:String>
+    <sys:String x:Key="Address.NameBoxName">宛先の名前</sys:String>
+    <sys:String x:Key="Address.Street">番地と番号</sys:String>
+    <sys:String x:Key="Address.StreetBoxName">宛先の番地と番号</sys:String>
+    <sys:String x:Key="Address.ZipCity">郵便番号と市区町村</sys:String>
+    <sys:String x:Key="Address.ZipCityBoxName">宛先の郵便番号と市区町村</sys:String>
+    <sys:String x:Key="Address.Country">国（任意）</sys:String>
+    <sys:String x:Key="Address.CountryBoxName">宛先の国（任意）</sys:String>
+    <sys:String x:Key="Address.SaveAndPrint">印刷して保存</sys:String>
+    <sys:String x:Key="Address.Print">印刷</sys:String>
+    <sys:String x:Key="Address.Cancel">キャンセル</sys:String>
+    <sys:String x:Key="Address.ValidationMsg">名前、番地、郵便番号/市区町村を少なくとも入力してください。</sys:String>
+    <sys:String x:Key="Address.ValidationTitle">入力が不完全です</sys:String>
+
+    <sys:String x:Key="Porto.Title">#PORTO を印刷</sys:String>
+    <sys:String x:Key="Porto.CodeLabel">DHLコード（DHLから受け取るもの）</sys:String>
+    <sys:String x:Key="Porto.CodeLabelName">DHLコードを入力</sys:String>
+    <sys:String x:Key="Porto.CodeBoxName">料金ラベルのDHLコード</sys:String>
+    <sys:String x:Key="Porto.Print">印刷</sys:String>
+    <sys:String x:Key="Porto.Cancel">キャンセル</sys:String>
+
+    <sys:String x:Key="AddressBook.Title">アドレス帳</sys:String>
+    <sys:String x:Key="AddressBook.ListName">保存済みの宛先</sys:String>
+    <sys:String x:Key="AddressBook.Print">印刷</sys:String>
+    <sys:String x:Key="AddressBook.Delete">削除</sys:String>
+    <sys:String x:Key="AddressBook.Close">閉じる</sys:String>
+    <sys:String x:Key="AddressBook.NoSelectionMsg">先にリストから宛先を選択してください。</sys:String>
+    <sys:String x:Key="AddressBook.NoSelectionTitle">選択なし</sys:String>
+    <sys:String x:Key="AddressBook.DeleteConfirm">「{0}」をアドレス帳から本当に削除しますか？</sys:String>
+    <sys:String x:Key="AddressBook.DeleteTitle">宛先を削除</sys:String>
+
+</ResourceDictionary>
