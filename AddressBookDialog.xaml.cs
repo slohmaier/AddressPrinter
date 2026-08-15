@@ -9,7 +9,7 @@ public partial class AddressBookDialog : Window
     public AddressBookDialog()
     {
         InitializeComponent();
-        Loaded += (_, _) => ThemeHelper.SetDarkTitleBar(this);
+        Loaded += (_, _) => { bool dark = ThemeManager.Resolve(SettingsService.LoadSettings().Theme) == "dark"; ThemeHelper.SetDarkTitleBar(this, dark); ThemeManager.ThemeApplied += ReapplyTheme; Closed += (_, _) => ThemeManager.ThemeApplied -= ReapplyTheme; };
         _recipients = SettingsService.LoadAddressBook();
         RefreshList();
     }
@@ -18,6 +18,12 @@ public partial class AddressBookDialog : Window
     {
         AddressListBox.ItemsSource = null;
         AddressListBox.ItemsSource = _recipients;
+    }
+
+    private void ReapplyTheme()
+    {
+        bool dark = ThemeManager.Resolve(SettingsService.LoadSettings().Theme) == "dark";
+        ThemeHelper.SetDarkTitleBar(this, dark);
     }
 
     public Recipient? SelectedRecipient =>

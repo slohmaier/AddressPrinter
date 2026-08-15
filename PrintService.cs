@@ -11,11 +11,18 @@ public static class PrintService
 {
     public static IReadOnlyList<string> GetPrinters()
     {
-        using var server = new LocalPrintServer();
-        return server.GetPrintQueues()
-                     .Select(q => q.FullName)
-                     .OrderBy(n => n)
-                     .ToList();
+        try
+        {
+            using var server = new LocalPrintServer();
+            return server.GetPrintQueues()
+                         .Select(q => q.FullName)
+                         .OrderBy(n => n)
+                         .ToList();
+        }
+        catch
+        {
+            return Array.Empty<string>();
+        }
     }
 
     public static void PrintSenderLabel(string printerName, LabelSettings settings)
@@ -25,7 +32,7 @@ public static class PrintService
             settings.SenderName,
             settings.SenderStreet,
             settings.SenderZipCity);
-        PrintDocument(printerName, doc, settings, "Absender");
+        PrintDocument(printerName, doc, settings, "Sender");
     }
 
     public static void PrintRecipientLabel(string printerName, LabelSettings settings, Recipient r)
@@ -36,7 +43,7 @@ public static class PrintService
             r.Street,
             r.ZipCity,
             r.Country);
-        PrintDocument(printerName, doc, settings, "Adresse");
+        PrintDocument(printerName, doc, settings, "Address");
     }
 
     public static void PrintPortoLabel(string printerName, LabelSettings settings, string code)
@@ -48,14 +55,32 @@ public static class PrintService
     private static void PrintDocument(string printerName, FixedDocument doc, LabelSettings settings, string jobName)
     {
         var dialog = new PrintDialog();
+
+        if (!string.IsNullOrWhiteSpace(printerName))
+        {
+            try
+            {
+                using var server = new LocalPrintServer();
+                var queue = server.GetPrintQueue(printerName);
+                if (queue != null)
+                {
+                    dialog.PrintQueue = queue;
+                }
+                else
+                {
+                    printerName = "";
+                }
+            }
+            catch
+            {
+                printerName = "";
+            }
+        }
+
         if (string.IsNullOrWhiteSpace(printerName))
         {
             if (dialog.ShowDialog() != true)
                 return;
-        }
-        else
-        {
-            dialog.PrintQueue = new LocalPrintServer().GetPrintQueue(printerName);
         }
 
         dialog.PrintTicket.PageMediaSize = new PageMediaSize(
@@ -87,7 +112,8 @@ public static class PrintService
             Foreground = Brushes.Black,
             TextWrapping = TextWrapping.Wrap,
             Width = w - 2 * margin,
-            LineHeight = lineHeight
+            LineHeight = lineHeight,
+            LineStackingStrategy = LineStackingStrategy.BlockLineHeight
         };
         FixedPage.SetLeft(block, margin);
         FixedPage.SetTop(block, margin);

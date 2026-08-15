@@ -23,14 +23,16 @@ public static class Localization
         var app = Application.Current;
         if (app == null) return;
 
-        // Entferne die vorherige Sprach-Ressource, falls vorhanden.
+        // Neue Resource zuerst hinzufügen, dann alte entfernen,
+        // damit DynamicResource-Bindings nie ohne Treffer bleiben.
         var existing = app.Resources.MergedDictionaries
             .FirstOrDefault(d => d.Source != null &&
                                  d.Source.OriginalString.StartsWith("Resources/Strings.", StringComparison.OrdinalIgnoreCase));
-        if (existing != null)
-            app.Resources.MergedDictionaries.Remove(existing);
 
         app.Resources.MergedDictionaries.Add(dict);
+
+        if (existing != null)
+            app.Resources.MergedDictionaries.Remove(existing);
     }
 
     public static string Get(string key)

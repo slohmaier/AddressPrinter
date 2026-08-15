@@ -10,7 +10,7 @@ public partial class SettingsWindow : Window
     public SettingsWindow(LabelSettings settings)
     {
         InitializeComponent();
-        Loaded += (_, _) => ThemeHelper.SetDarkTitleBar(this);
+        Loaded += (_, _) => { ReapplyTheme(); ThemeManager.ThemeApplied += ReapplyTheme; Closed += (_, _) => ThemeManager.ThemeApplied -= ReapplyTheme; };
         _settings = settings;
 
         PrinterCombo.ItemsSource = PrintService.GetPrinters();
@@ -39,6 +39,12 @@ public partial class SettingsWindow : Window
         SenderZipCityBox.Text = settings.SenderZipCity;
         WidthBox.Text = settings.LabelWidthMm.ToString("0.#");
         HeightBox.Text = settings.LabelHeightMm.ToString("0.#");
+    }
+
+    private void ReapplyTheme()
+    {
+        bool dark = ThemeManager.Resolve(_settings.Theme) == "dark";
+        ThemeHelper.SetDarkTitleBar(this, dark);
     }
 
     private void SaveButton_Click(object sender, RoutedEventArgs e)

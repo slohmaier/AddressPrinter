@@ -9,6 +9,13 @@
     <AssemblyName>AddressPrinter</AssemblyName>
     <RootNamespace>AddressPrinter</RootNamespace>
     <ApplicationIcon>app.ico</ApplicationIcon>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0</FileVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Description>Prints address, sender and #PORTO labels on a Phomemo M220 thermal printer.</Description>
+    <Company>Stefan Lohmaier</Company>
+    <Copyright>Copyright (c) 2026 Stefan Lohmaier</Copyright>
+    <Product>AddressPrinter</Product>
   </PropertyGroup>
 
   <ItemGroup>

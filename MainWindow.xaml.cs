@@ -11,9 +11,21 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        Loaded += (_, _) => ThemeHelper.SetDarkTitleBar(this);
+        Loaded += OnLoaded;
         _settings = SettingsService.LoadSettings();
         RefreshPrinterList();
+    }
+
+    private void OnLoaded(object? sender, RoutedEventArgs e)
+    {
+        ReapplyTheme();
+        ThemeManager.ThemeApplied += ReapplyTheme;
+    }
+
+    private void ReapplyTheme()
+    {
+        bool dark = ThemeManager.Resolve(_settings.Theme) == "dark";
+        ThemeHelper.SetDarkTitleBar(this, dark);
     }
 
     private void RefreshPrinterList()

@@ -10,8 +10,22 @@ public partial class AddressDialog : Window
     public AddressDialog()
     {
         InitializeComponent();
-        Loaded += (_, _) => ThemeHelper.SetDarkTitleBar(this);
+        Loaded += OnLoaded;
         NameBox.Focus();
+    }
+
+    private void OnLoaded(object? sender, RoutedEventArgs e)
+    {
+        bool dark = ThemeManager.Resolve(SettingsService.LoadSettings().Theme) == "dark";
+        ThemeHelper.SetDarkTitleBar(this, dark);
+        ThemeManager.ThemeApplied += ReapplyTheme;
+        Closed += (_, _) => ThemeManager.ThemeApplied -= ReapplyTheme;
+    }
+
+    private void ReapplyTheme()
+    {
+        bool dark = ThemeManager.Resolve(SettingsService.LoadSettings().Theme) == "dark";
+        ThemeHelper.SetDarkTitleBar(this, dark);
     }
 
     private bool ValidateAndBuild()

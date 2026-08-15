@@ -5,6 +5,8 @@ namespace AddressPrinter;
 
 public static class ThemeManager
 {
+    public static event Action? ThemeApplied;
+
     public static string Resolve(string setting)
     {
         return setting switch
@@ -51,5 +53,7 @@ public static class ThemeManager
         resources["GroupBgBrush"] = new SolidColorBrush(groupBg);
         resources["AccentBrush"] = new SolidColorBrush(accent);
         resources["BorderBrush"] = new SolidColorBrush(border);
+
+        ThemeApplied?.Invoke();
     }
 }
