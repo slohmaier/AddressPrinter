@@ -12,8 +12,6 @@
         <SolidColorBrush x:Key="AccentBrush" Color="#0E639C"/>
         <SolidColorBrush x:Key="BorderBrush" Color="#3F3F46"/>
 
-        <BitmapImage x:Key="AppIcon" UriSource="pack://application:,,,/app.ico"/>
-
         <Style TargetType="{x:Type Window}">
             <Setter Property="Background" Value="{DynamicResource WindowBgBrush}"/>
             <Setter Property="Foreground" Value="{DynamicResource ControlFgBrush}"/>

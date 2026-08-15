@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="{DynamicResource MainWindow.Title}" Height="500" Width="520" MinHeight="440" MinWidth="420"
         Background="{DynamicResource WindowBgBrush}"
-        Icon="{DynamicResource AppIcon}"
+        Icon="pack://application:,,,/app.ico"
         WindowStartupLocation="CenterScreen">
     <Grid Margin="16">
         <Grid.RowDefinitions>
