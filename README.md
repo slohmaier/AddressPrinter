@@ -1,46 +1,46 @@
 # AddressPrinter
 
-Druckt Adress-, Absender- und #PORTO-Etiketten automatisiert auf einem Thermobondrucker.
+Automatically prints address, sender, and #PORTO labels on a thermal label printer.
 
-**AddressPrinter wurde für die Phomemo-Etikettendrucker entwickelt und ausschließlich mit dem Phomemo M220 (USB, 203 DPI) getestet.** Andere Drucker oder Modelle werden nicht garantiert unterstützt.
+**AddressPrinter was built for Phomemo label printers and was exclusively tested with the Phomemo M220 (USB, 203 DPI).** Other printers or models are not guaranteed to be supported.
 
-## Funktionen
+## Features
 
-- **#PORTO-Label drucken** – druckt den großen Schriftzug `#PORTO` und darunter einen DHL-Code (den du von DHL bekommst).
-- **Drucke Absender** – druckt den in den Einstellungen hinterlegten Absender.
-- **Drucke Adresse** – Eingabedialog für Name, Straße, PLZ/Ort und optional Land; druckt das Empfänger-Label. Wahlweise mit „Drucken & Speichern“ direkt ins Adressbuch übernehmen.
-- **Adressbuch** – wiederkehrende Empfänger speichern, auswählen und drucken oder löschen.
-- **Etikettengröße** – Breite und Höhe des eingelegten Etiketts (in mm) werden in den Einstellungen konfiguriert; das Layout passt sich an.
-- **Design** – hell, dunkel oder „Folge System“.
-- **Lokalisierung** – 8 Sprachen: Englisch, Deutsch, Spanisch, Französisch, Italienisch, Japanisch, Niederländisch, Portugiesisch.
+- **Print #PORTO** – prints the large `#PORTO` headline with a DHL code underneath.
+- **Print sender** – prints the sender address configured in settings.
+- **Print address** – input dialog for name, street, post code/city, and optional country; prints the recipient label. Optionally save to the address book via "Print & Save".
+- **Address book** – store, select, print or delete recurring recipients.
+- **Label size** – width and height of the loaded label (in mm) configured in settings; the layout adapts automatically.
+- **Theme** – light, dark, or follow system.
+- **Localisation** – 8 languages: English, German, Spanish, French, Italian, Japanese, Dutch, Portuguese.
 
-## Voraussetzungen
+## Requirements
 
-- Windows 10 (Build 1903+) oder Windows 11 (für den dunklen Titelbalken)
-- [.NET 10 SDK](https://dotnet.microsoft.com/) (nur zum Bauen)
-- Ein installierter Druckertreiber für den Phomemo M220 (als Windows-Drucker sichtbar)
-- USB-Verbindung zum Drucker
+- Windows 10 (Build 1903+) or Windows 11 (for the dark title bar)
+- [.NET 10 SDK](https://dotnet.microsoft.com/) (build only)
+- An installed Phomemo M220 printer driver (visible as a Windows printer)
+- USB connection to the printer
 
-## Bauen und Starten
+## Build and Run
 
 ```powershell
 dotnet build -c Debug
 dotnet run
 ```
 
-Die ausführbare Datei liegt danach unter `bin\Debug\net10.0-windows\AddressPrinter.exe`.
+The executable will be at `bin\Debug\net10.0-windows\AddressPrinter.exe`.
 
-## Konfiguration
+## Configuration
 
-Die Einstellungen werden als JSON unter `%APPDATA%\AddressPrinter\` gespeichert:
+Settings are stored as JSON in `%APPDATA%\AddressPrinter\`:
 
-- `settings.json` – Drucker, Absender, Etikettengröße, Design, Sprache
-- `addressbook.json` – gespeicherte Empfänger
+- `settings.json` – printer, sender, label size, theme, language
+- `addressbook.json` – saved recipients
 
-## Wichtiger Hinweis
+## Important Note
 
-Dieses Programm wurde ausschließlich mit einem **Phomemo M220** (per USB) getestet. Funktionalität mit anderen Phomemo-Modellen oder anderen Thermobondruckern ist nicht garantiert.
+This software has been tested exclusively with a **Phomemo M220** (via USB). Functionality with other Phomemo models or other thermal label printers is not guaranteed.
 
-## Lizenz
+## License
 
-MIT – siehe [LICENSE](LICENSE).
+MIT – see [LICENSE](LICENSE).
