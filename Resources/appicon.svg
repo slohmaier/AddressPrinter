@@ -8,10 +8,16 @@
   </defs>
   <rect x="18" y="18" width="476" height="476" rx="92" ry="92" fill="#ffffff" stroke="none"/>
   <rect x="30" y="30" width="452" height="452" rx="80" ry="80" fill="url(#bgGradient)" stroke="none"/>
-  <!-- Umschlag -->
-  <g transform="translate(70,90)">
-    <rect x="0" y="40" width="320" height="280" rx="24" fill="none" stroke="#ffffff" stroke-width="16"/>
-    <polyline points="0,40 160,170 320,40" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-    <line x1="160" y1="170" x2="160" y2="310" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Umschlag (Brief) -->
+  <g transform="translate(60,80)">
+    <rect x="0" y="50" width="330" height="290" rx="24" fill="none" stroke="#ffffff" stroke-width="16"/>
+    <polyline points="0,50 165,180 330,50" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Andere Seite des Briefs: Etikett im Fenster -->
+    <rect x="75" y="120" width="180" height="130" rx="14" fill="none" stroke="#ffffff" stroke-width="12" opacity="0.9"/>
+    <line x1="95" y1="155" x2="235" y2="155" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.8"/>
+    <line x1="95" y1="195" x2="235" y2="195" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.8"/>
+    <line x1="95" y1="235" x2="200" y2="235" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.8"/>
   </g>
 </svg>
