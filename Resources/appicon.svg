@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#2a3f5f;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a2330;stop-opacity:1"/>
+    </radialGradient>
+  </defs>
+
+  <!-- White outline rounded rectangle -->
+  <rect x="18" y="18" width="476" height="476" rx="92" ry="92" fill="#ffffff"/>
+
+  <!-- Background rounded rectangle -->
+  <rect x="30" y="30" width="452" height="452" rx="80" ry="80" fill="url(#bgGradient)"/>
+
+  <!-- Address book (left, bold, fills well) -->
+  <g transform="translate(70,120)">
+    <!-- Book cover -->
+    <rect x="0" y="0" width="200" height="280" rx="12" fill="#e0e0e0"/>
+    <!-- Book spine -->
+    <rect x="0" y="0" width="36" height="280" rx="6" fill="#b0b0b0"/>
+    <!-- Pages -->
+    <rect x="30" y="8" width="162" height="264" rx="4" fill="#f8f8f8"/>
+    <!-- Address lines on pages -->
+    <line x1="52" y1="62" x2="172" y2="62" stroke="#555" stroke-width="10" stroke-linecap="round"/>
+    <line x1="52" y1="108" x2="172" y2="108" stroke="#555" stroke-width="10" stroke-linecap="round"/>
+    <line x1="52" y1="154" x2="172" y2="154" stroke="#555" stroke-width="10" stroke-linecap="round"/>
+    <line x1="52" y1="200" x2="140" y2="200" stroke="#555" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <!-- Printer (right, bold, overlapping the book) -->
+  <g transform="translate(200,180)">
+    <!-- Printer body -->
+    <rect x="0" y="40" width="220" height="160" rx="18" fill="#ffffff"/>
+    <!-- Paper slot -->
+    <rect x="24" y="58" width="172" height="28" rx="6" fill="#2a3f5f"/>
+    <!-- Paper coming out (behind body, visually extends upward) -->
+    <rect x="66" y="-30" width="88" height="72" rx="4" fill="#e8e8e8"/>
+    <!-- Paper lines -->
+    <line x1="82" y1="-12" x2="138" y2="-12" stroke="#999" stroke-width="8" stroke-linecap="round"/>
+    <line x1="82" y1="12" x2="138" y2="12" stroke="#999" stroke-width="8" stroke-linecap="round"/>
+    <!-- Button -->
+    <circle cx="32" cy="150" r="20" fill="#2a3f5f"/>
+    <!-- Output slot -->
+    <rect x="24" y="128" width="40" height="10" rx="4" fill="#555"/>
+  </g>
+</svg>
