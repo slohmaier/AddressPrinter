@@ -22,4 +22,12 @@
     <Resource Include="app.ico"/>
   </ItemGroup>
 
+  <Target Name="GenerateIcon" BeforeTargets="CoreCompile" Condition="!Exists('app.ico')">
+    <Message Text="Generating app.ico from SVG..." Importance="high" />
+    <Exec Command="python &quot;$(MSBuildProjectDirectory)\Resources\gen_icon.py&quot; &quot;$(MSBuildProjectDirectory)\Resources\appicon.svg&quot; &quot;$(MSBuildProjectDirectory)\app.ico&quot;" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="IconExitCode" />
+    </Exec>
+    <Warning Text="Icon generation failed (install Pillow + skia-python). Using pre-committed app.ico." Condition="'$(IconExitCode)' != '0'" />
+  </Target>
+
 </Project>

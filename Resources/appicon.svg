@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  AddressPrinter App Icon
-  Frame + Gradients unverändert aus dem slohmaier.com-Template.
-  Links: Address book als vier Zeilen (Punkt + Linie, dritte hervorgehoben).
-  Rechts: Drucker als weisses Rechteck mit Papierschlitz und Papier.
--->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
     <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
@@ -20,27 +14,27 @@
   <rect x="18" y="18" width="476" height="476" rx="92" ry="92" fill="#ffffff" stroke="none"/>
   <rect x="30" y="30" width="452" height="452" rx="80" ry="80" fill="url(#bgGradient)" stroke="none"/>
 
-  <!-- Address book (links): vier Zeilen mit Punkten, dritte hervorgehoben -->
-  <circle cx="100" cy="148" r="16" fill="url(#dotGradient)" opacity="0.75"/>
-  <line x1="140" y1="148" x2="280" y2="148" stroke="#ffffff" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
+  <!-- Address book (left): dots + lines wie ControlNav -->
+  <circle cx="100" cy="140" r="17" fill="url(#dotGradient)" opacity="0.75"/>
+  <line x1="136" y1="140" x2="280" y2="140" stroke="#ffffff" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
 
-  <circle cx="100" cy="218" r="16" fill="url(#dotGradient)" opacity="0.75"/>
-  <line x1="140" y1="218" x2="280" y2="218" stroke="#ffffff" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="100" cy="210" r="17" fill="url(#dotGradient)" opacity="0.75"/>
+  <line x1="136" y1="210" x2="280" y2="210" stroke="#ffffff" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
 
-  <circle cx="100" cy="288" r="22" fill="url(#dotGradient)"/>
-  <line x1="140" y1="288" x2="300" y2="288" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="100" cy="280" r="24" fill="url(#dotGradient)"/>
+  <line x1="136" y1="280" x2="300" y2="280" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
 
-  <circle cx="100" cy="358" r="16" fill="url(#dotGradient)" opacity="0.75"/>
-  <line x1="140" y1="358" x2="280" y2="358" stroke="#ffffff" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="100" cy="350" r="17" fill="url(#dotGradient)" opacity="0.75"/>
+  <line x1="136" y1="350" x2="280" y2="350" stroke="#ffffff" stroke-width="14" stroke-linecap="round" opacity="0.7"/>
 
-  <!-- Drucker (rechts): Papier, Gehäuse, Schlitz, Knopf -->
-  <rect x="310" y="130" width="88" height="100" rx="8" fill="#e8e8e8" opacity="0.5"/>
-  <line x1="326" y1="152" x2="382" y2="152" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
-  <line x1="326" y1="184" x2="382" y2="184" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
-  <line x1="326" y1="216" x2="366" y2="216" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
+  <!-- Printer (right): Gehäuse + Papier -->
+  <rect x="310" y="140" width="80" height="90" rx="8" fill="#e8e8e8" opacity="0.5"/>
+  <line x1="326" y1="162" x2="374" y2="162" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
+  <line x1="326" y1="194" x2="374" y2="194" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
+  <line x1="326" y1="226" x2="358" y2="226" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.4"/>
 
-  <rect x="290" y="228" width="168" height="140" rx="18" fill="#ffffff"/>
-  <rect x="312" y="246" width="124" height="22" rx="6" fill="#2a3f5f" opacity="0.65"/>
-  <circle cx="316" cy="328" r="15" fill="url(#dotGradient)"/>
-  <line x1="312" y1="310" x2="346" y2="310" stroke="#2a3f5f" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+  <rect x="300" y="228" width="168" height="140" rx="18" fill="#ffffff"/>
+  <rect x="324" y="248" width="120" height="22" rx="6" fill="#2a3f5f" opacity="0.65"/>
+  <circle cx="328" cy="330" r="16" fill="url(#dotGradient)"/>
+  <line x1="324" y1="312" x2="356" y2="312" stroke="#2a3f5f" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
 </svg>
