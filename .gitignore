@@ -12,5 +12,9 @@ obj/
 ## Rider
 .idea/
 
+# Installer build artifacts
+installer/payload/
+installer/output/
+
 ## Misc
 *.log
