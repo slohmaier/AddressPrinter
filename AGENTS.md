@@ -1,67 +1,66 @@
-# AddressPrinter — Projekt-Anweisungen
+# AddressPrinter — Project Instructions
 
-Gilt für jede Änderung in diesem Repo (Code, Build, Tests, Commit).
-Vor jedem Tool-Call hier die verbindlichen Regeln unten lesen.
+Applies to every change in this repository (code, build, tests, commit).
+Read the binding rules below before any tool call.
 
-## Projekt
+## Project
 
-- **Zweck:** Druckt Adress-, Absender- und `#PORTO`-Etiketten auf einem Thermoetikettendrucker.
-- **Fokus-Hardware:** Phomemo M220 (USB, 203 DPI) — ausschließlich mit diesem Modell getestet.
-  Andere Drucker/Modelle sind nicht garantiert unterstützt.
-- **Status:** Aktiv (Version 1.0.0)
-- **Lizenz:** MIT (siehe `LICENSE`)
-- **Repo:** https://github.com/slohmaier/AddressPrinter (öffentlich)
+- **Purpose:** Prints address, sender and `#PORTO` labels on a thermal label printer.
+- **Target hardware:** Phomemo M220 (USB, 203 DPI) — tested exclusively with this model.
+  Other printers/models are not guaranteed to be supported.
+- **Status:** Active (version 1.0.0)
+- **License:** MIT (see `LICENSE`)
+- **Repo:** https://github.com/slohmaier/AddressPrinter (public)
 
-## Technologie
+## Technology
 
-- **Sprache:** C# (Nullable + ImplicitUsings aktiv)
+- **Language:** C# (Nullable + ImplicitUsings enabled)
 - **Framework:** .NET 10, `net10.0-windows`, **WPF** (XAML, `UseWPF=true`)
-- **Abhängigkeiten:** Keine externen NuGet-Pakete
-- **Zielplattform:** Windows 10 (Build 1903+) / Windows 11 (dunkle Titelleiste)
+- **Dependencies:** None (no external NuGet packages)
+- **Target platform:** Windows 10 (Build 1903+) / Windows 11 (dark title bar)
 
 ## Build & Run
 
-Kein SCons — **`dotnet` ist das Build-System** (SDK-Projekt, `AddressPrinter.csproj`).
+No SCons — **`dotnet` is the build system** (SDK-style project, `AddressPrinter.csproj`).
 
 ```powershell
 dotnet build -c Debug
 dotnet run
-dotnet build -c Release   # Release-Build
+dotnet build -c Release   # Release build
 ```
 
-- Ausgabe: `bin\Debug\net10.0-windows\AddressPrinter.exe`
-- Toolchain-Pin: **.NET 10 SDK** (nur zum Bauen nötig; Runtime liefert Windows/.NET mit)
+- Output: `bin\Debug\net10.0-windows\AddressPrinter.exe`
+- Toolchain pin: **.NET 10 SDK** (required for building only; runtime ships with Windows/.NET)
 
 ## 🔒 IRON RULES
 
-1. **Buildartefakte niemals committen.** `bin/` und `obj/` sind per `.gitignore`
-   ausgeschlossen — kein `git add -f bin obj`, kein Einchecken von `*.dll`/`*.exe`/
-   `*.pdb`/generierten `*.g.cs`/`*.baml`. Working Tree immer sauber halten.
-2. **Lokalisierung vollständig halten.** Neue UI-Strings müssen in **allen 8**
-   Sprachdateien ergänzt werden (`Resources/Strings.*.xaml`):
-   `de`, `en`, `es`, `fr`, `it`, `ja`, `nl`, `pt`. Fehlt eine Sprache, ist es ein Bug.
-3. **Icon-Quelle ist `Resources/appicon.svg`.** `app.ico` wird daraus per
-   `Resources/gen_icon.py` generiert (Build-Target `GenerateIcon`, benötigt
-   Pillow + skia-python). `app.ico` ist committet und dient als Fallback —
-   nur das SVG editieren, niemals den Build-Aufruf umgehen oder `app.ico`
-   von Hand erzeugen.
+1. **Never commit build artifacts.** `bin/` and `obj/` are excluded via `.gitignore` —
+   no `git add -f bin obj`, no checking in `*.dll`/`*.exe`/`*.pdb`/generated
+   `*.g.cs`/`*.baml`. Always keep the working tree clean.
+2. **Keep localization complete.** New UI strings must be added to **all 8** language
+   files (`Resources/Strings.*.xaml`): `de`, `en`, `es`, `fr`, `it`, `ja`, `nl`, `pt`.
+   A missing language is a bug.
+3. **The icon source is `Resources/appicon.svg`.** `app.ico` is generated from it via
+   `Resources/gen_icon.py` (build target `GenerateIcon`, requires Pillow + skia-python).
+   `app.ico` is committed and serves as fallback — only ever edit the SVG, never
+   circumvent the build step or generate `app.ico` by hand.
 
-## Konventionen
+## Conventions
 
-- **Lokalisierung:** `Localization.cs` lädt `Resources/Strings.*.xaml` je nach
-  Spracheinstellung; Schlüssel in allen 8 Dateien synchron halten (siehe IRON RULE 2).
-- **Einstellungen:** liegen außerhalb des Repos in `%APPDATA%\AddressPrinter\`
-  (`settings.json` – Drucker, Absender, Etikettengröße, Theme, Sprache;
-  `addressbook.json` – gespeicherte Empfänger). Nie ins Repo committen.
-- **Print-Stack:** `PrintService.cs` kapselt den Druck (WPF-Druckpipeline an den
-  Phomemo-Treiber). Änderungen am Envelope/Layout müssen mit der M220
-  gegengelesen werden (Label-Größen sind mm-genau konfigurierbar).
-- **Commits:** Klein, aussagekräftig, am besten auf Englisch. Keine Artefakte,
-  keine Tools-/IDE-Dateien (`.vs/`, `.idea/`, `*.user`).
+- **Localization:** `Localization.cs` loads `Resources/Strings.*.xaml` depending on the
+  language setting; keep keys in sync across all 8 files (see IRON RULE 2).
+- **Settings:** live outside the repo in `%APPDATA%\AddressPrinter\`
+  (`settings.json` – printer, sender, label size, theme, language;
+  `addressbook.json` – saved recipients). Never commit them to the repo.
+- **Print stack:** `PrintService.cs` encapsulates printing (WPF print pipeline to the
+  Phomemo driver). Changes to the layout/envelope must be validated against the M220
+  (label sizes are configurable in mm).
+- **Commits:** Small and meaningful, in English. No artifacts or IDE/tool files
+  (`.vs/`, `.idea/`, `*.user`).
 
 ## Definition of Done
 
-1. `dotnet build -c Debug` und `-c Release` laufen fehlerfrei durch.
-2. Neue/geänderte Strings in allen 8 Sprachdateien vorhanden.
-3. `git status` zeigt ausschließlich gewollte Quelländerungen
-   (keine `bin/`-/`obj/`-Einträge, nicht mal als untracked).
+1. `dotnet build -c Debug` and `-c Release` succeed without errors.
+2. New/changed strings exist in all 8 language files.
+3. `git status` shows only intended source changes (no `bin/`/`obj/` entries,
+   not even untracked).

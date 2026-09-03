@@ -22,7 +22,7 @@ public static class SettingsService
         }
         catch
         {
-            // Bei Fehlern mit Standardwerten weiterarbeiten.
+            // On errors, continue with default values.
         }
         return new LabelSettings();
     }
@@ -42,7 +42,7 @@ public static class SettingsService
         }
         catch
         {
-            // Bei Fehlern leer weiterarbeiten.
+            // On errors, continue with an empty list.
         }
         return new List<Recipient>();
     }

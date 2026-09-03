@@ -23,8 +23,8 @@ public static class Localization
         var app = Application.Current;
         if (app == null) return;
 
-        // Neue Resource zuerst hinzufügen, dann alte entfernen,
-        // damit DynamicResource-Bindings nie ohne Treffer bleiben.
+        // Add the new resource first, then remove the old one,
+        // so DynamicResource bindings always find a match.
         var existing = app.Resources.MergedDictionaries
             .FirstOrDefault(d => d.Source != null &&
                                  d.Source.OriginalString.StartsWith("Resources/Strings.", StringComparison.OrdinalIgnoreCase));
