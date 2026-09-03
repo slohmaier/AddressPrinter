@@ -6,7 +6,7 @@ Automatically prints address, sender, and #PORTO labels on a thermal label print
 
 ## Features
 
-- **Print #PORTO** – prints the large `#PORTO` headline with a DHL code underneath.
+- **Print #PORTO** – prints the large `#PORTO` headline with a DHL code underneath. For more about the Deutsche Post mobile stamp, see [Mobile Briefmarke](https://www.deutschepost.de/de/m/mobile-briefmarke.html).
 - **Print sender** – prints the sender address configured in settings.
 - **Print address** – input dialog for name, street, post code/city, and optional country; prints the recipient label. Optionally save to the address book via "Print & Save".
 - **Address book** – store, select, print or delete recurring recipients.
